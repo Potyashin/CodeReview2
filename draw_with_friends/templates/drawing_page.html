@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Рисование</title>
+    <meta http-equiv="refresh" content="5" >
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/background_style.css">
+    <link rel="stylesheet" href="/static/picture_style.css">
+    <link rel="stylesheet" href="/static/button_style.css">
+</head>
+<body>
+<div class="drawing_picture_position">
+    <img src="/static/picture.png" style="top: {{pos[0]}}px; left: {{pos[1]}}px;">
+</div>
+
+<a href="/picture"><b style="font-size: 30px;">Назад</b></a>
+
+<div class="button_position">
+    {% for i in button_positions %}
+    <form action="/drawing{{ pos }}/{{ i }}" method="get">
+        <button type="submit" style="top: {{ i[1] }}px; left: {{ i[0] }}px;" class="hidden_button"></button>
+    </form>
+    {% endfor %}
+</div>
+
+
+<div class="color_button_position" style="left: -1024px;">
+    {% for i in range(8) %}
+    <form action="/drawing{{ pos }}/{{ left_colors[i] }}" method="post">
+        <button type="submit" style="top: {{ i*96 }}px; background: {{ left_colors[i] }};" class="color_button"></button>
+    </form>
+    {% endfor %}
+</div>
+
+<div class="color_button_position" style="left: 1024px;">
+    {% for i in range(8) %}
+    <form action="/drawing{{ pos }}/{{ right_colors[i] }}" method="post">
+        <button type="submit" style="top: {{ i*96 }}px;  background: {{ right_colors[i] }};" class="color_button"></button>
+    </form>
+    {% endfor %}
+</div>
+
+
+
+
+</body>
+</html>

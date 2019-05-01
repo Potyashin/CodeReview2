@@ -1,0 +1,50 @@
+/*.outer {
+    width: 512px;
+    height: 512px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    pointer-events: none;
+}*/
+
+.picture_position {
+    width: 512px;
+    height: 512px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    pointer-events: none;
+}
+
+.picture_position img {
+    width: 100%;
+    height: 100%;
+}
+
+.drawing_picture_position {
+    position: absolute;
+    clip: rect(auto, auto, auto, auto);
+    width: 512px; /* Ширина блока */
+    height: 512px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    pointer-events: none;*/
+}
+
+.drawing_picture_position img {
+    width: 4096px;
+    height: 4096px;
+    position: absolute;
+
+    margin: auto;
+    pointer-events: none;
+}

@@ -1,0 +1,21 @@
+.field {
+    clear:both;
+    text-align:right;
+    line-height:25px;
+}
+
+label {
+    float:left;
+    padding-right:10px;
+}
+
+.main1 {
+    float:left;
+}
+
+.main2 {
+    float:left;
+    position: absolute;
+    top: 110px;
+    left: 8px;
+}
