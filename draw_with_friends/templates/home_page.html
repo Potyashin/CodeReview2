@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Домашняя страница</title>
+    <meta http-equiv="refresh" content="5" >
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/background_style.css">
+    <link rel="stylesheet" href="/static/picture_style.css">
+    <link rel="stylesheet" href="/static/button_style.css">
+</head>
+<body>
+<div class="picture_position">
+    <img src="/static/picture.png">
+</div>
+
+<a href="/logout"><b style="font-size: 30px;">Разлогиниться</b></a>
+
+<div class="button_position">
+    {% for pos in button_positions %}
+    <form action="/drawing{{ pos }}">
+            <button type="submit" style="top: {{ pos[0] }}px; left: {{ pos[1] }}px;" class="hidden_button"></button>
+    </form>
+    {% endfor %}
+
+    {% for pos in user_button_positions %}
+    <form action="/drawing{{ pos }}">
+
+            <button type="submit" style="top: {{ pos[0] }}px; left: {{ pos[1] }}px; border-color: red" class="hidden_button"></button>
+    </form>
+    {% endfor %}
+</div>
+
+</body>
+</html>
